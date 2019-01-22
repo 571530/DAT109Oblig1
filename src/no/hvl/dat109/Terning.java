@@ -6,10 +6,16 @@ public class Terning {
 
     static Dyr currentDyr;
 
+
     public static void setCurrentDyr(Dyr currentDyr) {
         Terning.currentDyr = currentDyr;
     }
 
+    /**
+     * Dyret som var på terningen er endret og blir returnert med metoden.
+     *
+     * @return Eit nytt dyr fra terningen.
+     */
     public Dyr trill() {
         setCurrentDyr(Dyr.getTilfeldigDyr());
         return currentDyr;

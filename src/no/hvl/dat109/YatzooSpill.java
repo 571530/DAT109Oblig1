@@ -1,12 +1,25 @@
 package no.hvl.dat109
 
+
+/**
+ * Definerer Yatzoo spill
+ * @author Enah
+  */
 public class YatzooSpill{
 
+    /**
+     * Tildele runder for hver spiller
+     */
     public void tildelRunder(){
 
     }
 
-    public void finnVinner(){
-
+    /**
+     * Finner vinneren
+     *
+     * @return vinneren
+     */
+    public Spiller finnVinner(){
+        return null;
     }
 }

@@ -1,3 +1,5 @@
 public class Terning {
-    int i;
+    enum Dyr{
+        LØVE, SLANGE, PANDA, GRIS, ELEFANT, HVAL
+    }
 }

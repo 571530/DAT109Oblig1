@@ -1,0 +1,8 @@
+@startuml
+(Spill spillet) as (Spill)
+
+Bruker -> (Spill)
+
+note right of Bruker : 2 til 5 spillere
+
+@enduml

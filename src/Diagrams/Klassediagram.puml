@@ -1,0 +1,41 @@
+@startuml
+
+class Yatzoo{
+TildelRunder()
+}
+
+class Spiller{
+String navn
+}
+
+class Runde{
+enum dyr
+3 like
+4 like
+2 par
+hus
+5 ulike
+yatzoo
+}
+
+class Terning{
+Dyr
+love(oransje)
+slange(gronn)
+panda(svart)
+gris(rosa)
+elefant(graa)
+hval(blaa)
+
+trill()
+}
+
+Yatzoo -> Spiller
+Yatzoo -> Runde
+Spiller -> Runde
+Runde -> Terning
+Runde -> Spiller
+
+
+
+@enduml

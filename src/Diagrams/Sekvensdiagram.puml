@@ -1,0 +1,23 @@
+@startuml
+box
+    participant Spiller1
+    participant Spiller2
+end box
+
+Spiller1 <- Yatzoo: Tildel runder
+Spiller2 <- Yatzoo: Tildel runder
+
+note left : Kan være flere enn 2 spillere
+
+loop for alle runder
+    loop for alle spillere
+        Spiller1 -> Runde : spille runde
+        loop 3
+            Runde -> Terning : kast terninger
+        end
+    end
+end
+
+Yatzoo -> Yatzoo : finn vinner
+
+@enduml

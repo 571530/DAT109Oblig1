@@ -13,7 +13,7 @@ loop for alle runder
     loop for alle spillere
         Spiller1 -> Runde : spille runde
         loop 3
-            Runde -> Terning : kast terninger
+            Runde -> no.hvl.dat109.Terning : kast terninger
         end
     end
 end

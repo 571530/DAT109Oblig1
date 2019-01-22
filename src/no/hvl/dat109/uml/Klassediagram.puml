@@ -18,7 +18,7 @@ hus
 yatzoo
 }
 
-class Terning{
+class no.hvl.dat109.Terning{
 Dyr
 love(oransje)
 slange(gronn)
@@ -33,7 +33,7 @@ trill()
 Yatzoo -> Spiller
 Yatzoo -> Runde
 Spiller -> Runde
-Runde -> Terning
+Runde -> no.hvl.dat109.Terning
 Runde -> Spiller
 
 

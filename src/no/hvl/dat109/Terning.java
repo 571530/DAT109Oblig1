@@ -2,14 +2,12 @@ package no.hvl.dat109;
 
 import java.util.Random;
 
+import static no.hvl.dat109.Terning.Dyr.getTilfeldigDyr;
+
 public class Terning {
 
-    static Dyr currentDyr;
+    public Dyr currentDyr;
 
-
-    public static void setCurrentDyr(Dyr currentDyr) {
-        Terning.currentDyr = currentDyr;
-    }
 
     /**
      * Dyret som var på terningen er endret og blir returnert med metoden.
@@ -17,11 +15,13 @@ public class Terning {
      * @return Eit nytt dyr fra terningen.
      */
     public Dyr trill() {
-        setCurrentDyr(Dyr.getTilfeldigDyr());
+        currentDyr = getTilfeldigDyr();
+
+
         return currentDyr;
     }
 
-    private enum Dyr {
+    public enum Dyr {
         LØVE,
         SLANGE,
         PANDA,
@@ -34,9 +34,13 @@ public class Terning {
          *
          * @return et tilfeldig dyr.
          */
+
         public static Dyr getTilfeldigDyr() {
             Random random = new Random();
-            return values()[random.nextInt(values().length)];
+            Dyr d = values()[random.nextInt(values().length)];
+            return d;
         }
+
+
     }
 }

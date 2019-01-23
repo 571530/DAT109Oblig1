@@ -8,7 +8,6 @@ public class Terning {
 
     public Dyr currentDyr;
 
-
     /**
      * Dyret som var på terningen er endret og blir returnert med metoden.
      *
@@ -16,8 +15,6 @@ public class Terning {
      */
     public Dyr trill() {
         currentDyr = getTilfeldigDyr();
-
-
         return currentDyr;
     }
 
@@ -34,13 +31,10 @@ public class Terning {
          *
          * @return et tilfeldig dyr.
          */
-
         public static Dyr getTilfeldigDyr() {
             Random random = new Random();
             Dyr d = values()[random.nextInt(values().length)];
             return d;
         }
-
-
     }
 }

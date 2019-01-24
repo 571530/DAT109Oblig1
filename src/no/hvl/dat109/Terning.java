@@ -10,6 +10,10 @@ public class Terning {
         return currentDyr;
     }
 
+    public void setCurrentDyr(Dyr currentDyr) {
+        this.currentDyr = currentDyr;
+    }
+
     private Dyr currentDyr;
 
     /**

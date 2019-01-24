@@ -8,10 +8,6 @@ public class NLikeRunde extends Runde {
     }
 
     public int poeng() {
-        boolean nLike = getTerninger().stream()
-                .anyMatch(a -> getTerninger().stream()
-                        .filter(b -> a.getCurrentDyr().equals(b.getCurrentDyr())).count() >= n);
-
-        return nLike ? n : 0;
+        return harNLike(n) ? n : 0;
     }
 }

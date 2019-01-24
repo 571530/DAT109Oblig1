@@ -26,7 +26,7 @@ public class YatzooSpill{
             spiller.tildelRunde(new NLikeRunde(4));
             // Mangler to par
             // Mangler hus
-            // Mangler fem ulike
+            spiller.tildelRunde(new NUlikeRunde(5));
             spiller.tildelRunde(new YatzooRunde());
         }
     }

@@ -6,7 +6,11 @@ import static no.hvl.dat109.Terning.Dyr.getTilfeldigDyr;
 
 public class Terning {
 
-    public Dyr currentDyr;
+    public Dyr getCurrentDyr() {
+        return currentDyr;
+    }
+
+    private Dyr currentDyr;
 
     /**
      * Dyret som var på terningen er endret og blir returnert med metoden.

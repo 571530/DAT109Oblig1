@@ -7,6 +7,9 @@ import java.util.stream.IntStream;
 
 public class ToParRunde extends Runde {
 
+    /**
+     * @return 4 hvis 2 par eller 0
+     */
     public int poeng() {
         return hentPar().size() >= 2 ? 4 : 0;
     }

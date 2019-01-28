@@ -76,7 +76,7 @@ public class RundeTest {
 
     @Test
     public void NUlikeTest() {
-        Runde femUlike = new NUlikeRunde(5);
+        Runde femUlike = new UlikeRunde();
 
         femUlike.getTerninger().get(0).setCurrentDyr(Terning.Dyr.LØVE);
         femUlike.getTerninger().get(1).setCurrentDyr(Terning.Dyr.PANDA);

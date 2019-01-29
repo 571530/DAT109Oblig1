@@ -9,8 +9,8 @@ spillRunde(spiller)
 class Tekstgrensesnitt {
     lesValg()
     lesSpillere()
-    visPoeng()
-    visTerninger()
+    visPoeng(runde)
+    visTerninger(terninger)
 }
 
 class Spiller{

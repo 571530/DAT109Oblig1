@@ -39,4 +39,14 @@ public class Spiller {
     public int antallPoeng() {
         return runder.stream().map(Runde::poeng).reduce(0, (a, b) -> a + b);
     }
+
+    /**
+     * @return navnet til spilleren som String
+     */
+    @Override
+    public String toString() {
+        return "Spiller{" +
+                "navn='" + navn + '\'' +
+                '}';
+    }
 }

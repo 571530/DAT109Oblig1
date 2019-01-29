@@ -1,7 +1,7 @@
 @startuml
-(Spill spillet) as (Spill)
+(Spiller spillet) as (Spill)
 
-Bruker -> (Spill)
+Bruker -> (Spill) : velger terninger som skal kastes på nytt
 
 note right of Bruker : 2 til 5 spillere
 

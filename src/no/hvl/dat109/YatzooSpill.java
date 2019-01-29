@@ -3,11 +3,7 @@ package no.hvl.dat109;
 
 import java.util.ArrayList;
 
-/**
- * Definerer Yatzoo spill
- *
- * @author Enah
- */
+
 public class YatzooSpill {
 
     private ArrayList<Spiller> spillere = new ArrayList<Spiller>();

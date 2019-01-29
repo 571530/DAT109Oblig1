@@ -2,10 +2,20 @@
 
 class Yatzoo{
 TildelRunder()
+spill()
+spillRunde(spiller)
+}
+
+class Tekstgrensesnitt {
+    lesValg()
+    lesSpillere()
+    visPoeng()
+    visTerninger()
 }
 
 class Spiller{
 String navn
+spillerRunde()
 }
 
 class Runde{
@@ -31,6 +41,7 @@ trill()
 }
 
 Yatzoo -> Spiller
+Yatzoo -> Tekstgrensesnitt
 Yatzoo -> Runde
 Spiller -> Runde
 Runde -> no.hvl.dat109.Terning

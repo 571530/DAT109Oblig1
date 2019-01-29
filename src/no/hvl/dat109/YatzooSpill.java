@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * Definerer Yatzoo spill
- * @author Enah
+ * @author
   */
 public class YatzooSpill{
 

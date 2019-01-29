@@ -8,6 +8,7 @@ public class YatzooSpill {
 
     private ArrayList<Spiller> spillere = new ArrayList<Spiller>();
 
+
     public void leggTilSpiller(Spiller spiller) {
         spillere.add(spiller);
     }

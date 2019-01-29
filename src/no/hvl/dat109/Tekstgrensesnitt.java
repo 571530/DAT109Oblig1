@@ -45,6 +45,13 @@ public class Tekstgrensesnitt {
     }
 
     private void visTerninger() {
+        ArrayList<Terning> terninger = new ArrayList<Terning>();
+        terninger = Runde.getTerninger();
+
+
+        for (terning t: terninger) {
+
+        }
     }
 
 }

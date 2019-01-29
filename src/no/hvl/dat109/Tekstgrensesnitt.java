@@ -21,4 +21,30 @@ public class Tekstgrensesnitt {
         return spillere;
     }
 
+    public List<Integer> lesValg() {
+
+        Scanner sc = new Scanner(System.in);
+        List<Integer> valgene = new ArrayList<>();
+
+        System.out.println("Hvilke terninger vil du kaste på nytt?"
+                + "\n1) " + "Terning 1"
+                + "\n2) " + "Terning 2"
+                + "\n3) " + "Terning 3"
+                + "\n4) " + "Terning 4"
+                + "\n5) " + "Terning 5"
+                + "\n0) " + "Beholde alle terninger");
+
+        int i = 5;
+        String in = sc.nextLine();
+        while (in != "0" && i == 0) {
+            int valg = Integer.parseInt(in);
+            valgene.add(valg);
+            i--;
+        }
+        return valgene;
+    }
+
+    private void visTerninger() {
+    }
+
 }

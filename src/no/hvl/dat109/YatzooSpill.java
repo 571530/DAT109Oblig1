@@ -5,16 +5,17 @@ import java.util.ArrayList;
 
 /**
  * Definerer Yatzoo spill
- * @author
-  */
-public class YatzooSpill{
+ *
+ * @author Enah
+ */
+public class YatzooSpill {
 
     private ArrayList<Spiller> spillere = new ArrayList<Spiller>();
 
     /**
      * Tildele runder for hver spiller
      */
-    public void tildelRunder(){
+    public void tildelRunder() {
         for (Spiller spiller : spillere) {
             spiller.tildelRunde(new DyrRunde(Terning.Dyr.LØVE));
             spiller.tildelRunde(new DyrRunde(Terning.Dyr.SLANGE));
@@ -24,19 +25,19 @@ public class YatzooSpill{
             spiller.tildelRunde(new DyrRunde(Terning.Dyr.HVAL));
             spiller.tildelRunde(new NLikeRunde(3));
             spiller.tildelRunde(new NLikeRunde(4));
-            // Mangler to par
-            // Mangler hus
-            spiller.tildelRunde(new NUlikeRunde(5));
+            spiller.tildelRunde(new ToParRunde());
+            spiller.tildelRunde(new HusRunde());
+            spiller.tildelRunde(new UlikeRunde());
             spiller.tildelRunde(new YatzooRunde());
         }
     }
 
     /**
-     * Finner vinneren
-     *
-     * @return vinneren
+     * Finner spillerene som har flest poeng, altså vinneren
+     * Hvis ingen spillere blir null retunert
+     * @return vinneren, eller null hvis ingen spillere
      */
-    public Spiller finnVinner(){
+    public Spiller finnVinner() {
         return spillere.stream().max((a, b) -> a.antallPoeng() - b.antallPoeng()).orElse(null);
     }
 }

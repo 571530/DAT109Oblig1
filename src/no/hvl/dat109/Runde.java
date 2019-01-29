@@ -10,20 +10,55 @@ public abstract class Runde {
     private ArrayList<Terning> terninger = new ArrayList<>();
     private int antallkast = 3;
 
+
+    /**
+     * lager ny runde med 5 terninger,
+     */
+    public Runde() {
+        terninger.add(new Terning());
+        terninger.add(new Terning());
+        terninger.add(new Terning());
+        terninger.add(new Terning());
+        terninger.add(new Terning());
+
+        for (Terning terning : terninger) {
+            terning.trill();
+        }
+
+        antallkast--;
+    }
+
+    /**
+     * henter terningene
+     * @return ternigene
+     */
     public ArrayList<Terning> getTerninger() {
         return terninger;
     }
 
+    /**
+     * henter antall kast
+     * @return antallkast
+     */
     public int getAntallkast() {
         return antallkast;
     }
 
+    /**
+     * returner om runde har n antall like
+     * @param n
+     * @return om n antall like terninger
+     */
     public boolean harNLike(int n) {
         return getTerninger().stream()
                 .anyMatch(a -> getTerninger().stream()
                         .filter(b -> a.getCurrentDyr().equals(b.getCurrentDyr())).count() >= n);
     }
 
+    /**
+     * henter liste med alle par
+     * @return liste med par
+     */
     public List<Par<Terning>> hentPar() {
         List<Par<Terning>> allePar = new ArrayList<>();
 
@@ -48,28 +83,24 @@ public abstract class Runde {
         return unikePar;
     }
 
-
-    public Runde() {
-        terninger.add(new Terning());
-        terninger.add(new Terning());
-        terninger.add(new Terning());
-        terninger.add(new Terning());
-        terninger.add(new Terning());
-
-        for (Terning terning : terninger) {
-            terning.trill();
-        }
-
-        antallkast--;
-    }
-
+    /**
+     * setter antallKast til 0
+     */
     public void behold() {
         antallkast = 0;
     }
 
+    /**
+     * sjekker om runden har flere kast
+     * @return om det er flere kast
+     */
     public boolean ferdig() {
         return antallkast <= 0;
     }
 
+    /**
+     * henter antall poeng for runden
+     * @return antall poeng fra runden
+     */
     public abstract int poeng();
 }

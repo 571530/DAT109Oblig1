@@ -35,10 +35,18 @@ public class Par<T> {
         return t1 == p.t1 && t2 == p.t2  || t1 == p.t2 && t2 == p.t1;
     }
 
+    /**
+     * @param t, object to check
+     * @return hvis t er lik t1 eller t2 så true ellers false
+     */
     public boolean contains(T t) {
         return t1==t || t2==t;
     }
 
+    /**
+     * @param p
+     * @return hvis paret inneholder p.t1 eller p.t2 så true ellers false
+     */
     public boolean contains(Par<T> p) {
         return contains(p.getT1()) ||  contains(p.getT2());
     }

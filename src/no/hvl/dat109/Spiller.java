@@ -19,6 +19,16 @@ public class Spiller {
         this.runder.add(runde);
     }
 
+
+    public void spillRunde(){
+
+        Runde runde = runder.stream().filter(a -> !a.ferdig()).findAny().orElse(null);
+        if (runde != null){
+            runde.trillTerningN();
+        }
+
+    }
+
     /**
      * @return summen av poengene for alle rundene
      */

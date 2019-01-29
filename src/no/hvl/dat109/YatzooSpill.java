@@ -36,6 +36,11 @@ public class YatzooSpill {
         }
     }
 
+    public void spillRunde(Spiller spiller){
+
+    }
+
+
     /**
      * Finner spillerene som har flest poeng, altså vinneren
      * Hvis ingen spillere blir null retunert

@@ -29,6 +29,28 @@ public abstract class Runde {
     }
 
     /**
+     * triller en valgt terning om igjen
+     * @return terning
+     */
+    public void trillTerningN(int n){
+        if(n <= 5){
+            terninger.get(n).trill();
+        }
+    }
+
+    /**
+     * går gjennom alle terningene
+     * @return terninger som spesifiseres i trillTerningN(int n)
+     * @param trill
+     */
+    public void trillTerningN(List<Integer>trill){
+        for (int i = 0; i < trill.size(); i++){
+            trillTerningN(trill.get(i));
+        }
+        antallkast--;
+    }
+
+    /**
      * henter terningene
      * @return ternigene
      */

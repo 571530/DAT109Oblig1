@@ -20,11 +20,15 @@ public class Spiller {
     }
 
 
+    /**
+     * Går inn i spesifikk runde og gjør ønskede omtrill
+     * @return enkelt runde
+     */
     public void spillRunde(){
 
         Runde runde = runder.stream().filter(a -> !a.ferdig()).findAny().orElse(null);
         if (runde != null){
-            runde.trillTerningN();
+            //runde.trillTerningN();
         }
 
     }

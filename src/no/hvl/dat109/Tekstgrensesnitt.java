@@ -22,7 +22,8 @@ public class Tekstgrensesnitt {
     }
 
     public static List<Integer> lesValg() {
-
+        /*
+        Fungerte ikke
         Scanner sc = new Scanner(System.in);
         List<Integer> valgene = new ArrayList<>();
 
@@ -41,13 +42,41 @@ public class Tekstgrensesnitt {
             valgene.add(valg);
             i--;
         }
+
+
         return valgene;
+        */
+        Scanner sc = new Scanner(System.in);
+        List<Integer> valg = new ArrayList<>();
+
+        System.out.println("Skriv inn valgene med mellomrom imellom, får å beholde alle alle skriv ingenting");
+
+        String input = sc.nextLine();
+
+        input = input.trim();
+
+        if (input.isEmpty()) {
+            return valg;
+        }
+
+        String[] valgTekst = input.split(" ");
+
+        for (String valgStr : valgTekst) {
+            try {
+                valg.add(Integer.parseInt(valgStr));
+            } catch (Exception e) {
+                System.out.println("Invalid input");
+            }
+        }
+
+        return valg;
     }
 
-    private static void visTerninger(List<Terning> terninger) {
+    public static void visTerninger(List<Terning> terninger) {
         for (Terning t: terninger) {
-
+            System.out.print(t.getCurrentDyr().toString() + "\t");
         }
+        System.out.println();
     }
 
 }

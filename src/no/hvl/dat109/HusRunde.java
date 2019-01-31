@@ -4,6 +4,9 @@ import java.util.List;
 
 public class HusRunde extends Runde {
 
+    public String getNavn() {
+        return "Hus runde";
+    }
 
     /**
      * Hvis hus returnerer den 5 eller 0

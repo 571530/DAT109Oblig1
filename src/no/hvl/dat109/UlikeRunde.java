@@ -2,6 +2,11 @@ package no.hvl.dat109;
 
 public class UlikeRunde extends Runde {
 
+    @Override
+    public String getNavn() {
+        return "Fem ulike runde";
+    }
+
     /**
      * @return 5, hvis alle terninger ulike ellers 0
      */

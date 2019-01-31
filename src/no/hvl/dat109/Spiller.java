@@ -1,8 +1,13 @@
 package no.hvl.dat109;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Spiller {
+
+    public String getNavn() {
+        return navn;
+    }
 
     private String navn;
     private ArrayList<Runde> runder = new ArrayList<>();
@@ -22,16 +27,32 @@ public class Spiller {
 
     /**
      * Går inn i spesifikk runde og gjør ønskede omtrill
-     * @return enkelt runde
+     * @return false om vi er tomme for runder eller true
      */
-    public void spillRunde(){
+    public boolean spillRunde(){
+        Runde runde = runder.stream().filter(a -> !a.ferdig()).findFirst().orElse(null);
 
-        Runde runde = runder.stream().filter(a -> !a.ferdig()).findAny().orElse(null);
         if (runde != null){
-            //runde.trillTerningN();
+            while (!runde.ferdig()) {
+                System.out.println(runde.getNavn());
+                Tekstgrensesnitt.visTerninger(runde.getTerninger());
+                List<Integer> valg = Tekstgrensesnitt.lesValg();
+                if (valg.isEmpty()) {
+                    System.out.println("Beholder terninger");
+                    runde.behold();
+                }
+                else {
+                    System.out.println("Kaser på nytt");
+                    runde.trillTerningN(valg);
+                }
+                Tekstgrensesnitt.visTerninger(runde.getTerninger());
+            }
+            System.out.println(navn + " fikk " + runde.poeng() + " denne runden");
+            return true;
         }
-
+        return false;
     }
+
 
     /**
      * @return summen av poengene for alle rundene

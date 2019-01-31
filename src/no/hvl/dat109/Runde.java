@@ -10,6 +10,7 @@ public abstract class Runde {
     private ArrayList<Terning> terninger = new ArrayList<>();
     private int antallkast = 3;
 
+    public abstract String getNavn();
 
     /**
      * lager ny runde med 5 terninger,

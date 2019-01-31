@@ -2,11 +2,12 @@ package no.hvl.dat109;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class YatzooSpill {
 
-    private ArrayList<Spiller> spillere = new ArrayList<Spiller>();
+    private List<Spiller> spillere = new ArrayList<Spiller>();
 
 
     public void leggTilSpiller(Spiller spiller) {
@@ -33,10 +34,24 @@ public class YatzooSpill {
         }
     }
 
-    public void spillRunde(Spiller spiller){
-
+    public void init() {
+        spillere = Tekstgrensesnitt.lesSpillere();
+        tildelRunder();
     }
 
+    /**
+     * Start spillet og hver spiller spiller en runde til vi er tom for runder
+     */
+    public void spill() {
+        System.out.println("Starter spillet");
+        boolean ferdig = spillere.isEmpty();
+        while (!ferdig) {
+            for (Spiller spiller: spillere) {
+                System.out.println(spiller.getNavn() + " sin tur");
+                ferdig = !spiller.spillRunde();
+            }
+        }
+    }
 
     /**
      * Finner spillerene som har flest poeng, altså vinneren

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Tekstgrensesnitt {
-    public List<Spiller> lesSpillere() {
+    public static List<Spiller> lesSpillere() {
         ArrayList<Spiller> spillere = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
@@ -21,7 +21,7 @@ public class Tekstgrensesnitt {
         return spillere;
     }
 
-    public List<Integer> lesValg() {
+    public static List<Integer> lesValg() {
 
         Scanner sc = new Scanner(System.in);
         List<Integer> valgene = new ArrayList<>();
@@ -44,12 +44,8 @@ public class Tekstgrensesnitt {
         return valgene;
     }
 
-    private void visTerninger() {
-        ArrayList<Terning> terninger = new ArrayList<Terning>();
-        terninger = Runde.getTerninger();
-
-
-        for (terning t: terninger) {
+    private static void visTerninger(List<Terning> terninger) {
+        for (Terning t: terninger) {
 
         }
     }

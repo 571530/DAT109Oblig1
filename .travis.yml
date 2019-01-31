@@ -1,4 +1,7 @@
 language: java
 
+before_install:
+  - cd java
+
 jdk:
   - oraclejdk8

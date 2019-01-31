@@ -43,7 +43,7 @@ public abstract class Runde {
      * @return terninger som spesifiseres i trillTerningN(int n)
      * @param trill
      */
-    public void trillTerningN(List<Integer>trill){
+    public void trillTerningN(List<Integer> trill){
         for (int i = 0; i < trill.size(); i++){
             trillTerningN(trill.get(i));
         }

@@ -22,8 +22,8 @@ Dyr
 }
 
 Yatzoo "1" --> "2-5" Spiller : har
-Yatzoo -> Tekstgrensesnitt
-Spiller -> Tekstgrensesnitt
+Yatzoo -> Tekstgrensesnitt : bruker
+Spiller -> Tekstgrensesnitt : bruker
 Yatzoo "1" -> "flere" Runde : består av
 Spiller "1" -> "flere" Runde : spiller
 Runde "1" -> "5" no.hvl.dat109.Terning : har

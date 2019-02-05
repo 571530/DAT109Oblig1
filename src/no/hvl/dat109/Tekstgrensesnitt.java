@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Tekstgrensesnitt {
+
+    /**
+     * Leser inputen til brukeren, lager en spiller, og legger spilleren til listen
+     *
+     * @return listen av spillere
+     */
     public static List<Spiller> lesSpillere() {
         ArrayList<Spiller> spillere = new ArrayList<Spiller>();
         Scanner sc = new Scanner(System.in);

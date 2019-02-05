@@ -49,7 +49,7 @@ public class Tekstgrensesnitt {
         Scanner sc = new Scanner(System.in);
         List<Integer> valg = new ArrayList<>();
 
-        System.out.println("Skriv inn indeks på terninger du vil trille på nytt, for å beholde terninger alle skriv ingenting");
+        System.out.println("Skriv inn indeks (0-4) på terninger du vil trille på nytt, for å beholde terninger alle skriv ingenting");
 
         String input = sc.nextLine();
 

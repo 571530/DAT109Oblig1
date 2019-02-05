@@ -13,7 +13,7 @@ public class DyrRunde extends Runde {
 
     /**
      *
-     * @param dyret som skal samles på i runden
+     * @param dyr som skal samles på i runden
      */
     public DyrRunde(Terning.Dyr dyr) {
         this.navn = "\n" + dyr.toString() + " runde";

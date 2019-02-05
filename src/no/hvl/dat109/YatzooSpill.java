@@ -48,7 +48,7 @@ public class YatzooSpill {
         boolean ferdig = spillere.isEmpty() && spillere.stream().anyMatch(x -> !x.getRunder().isEmpty());
         while (!ferdig) {
             for (Spiller spiller: spillere) {
-                System.out.println(spiller.getNavn() + " sin tur");
+                System.out.println("\n" + spiller.getNavn() + " sin tur");
                 ferdig = !spiller.spillRunde();
             }
         }

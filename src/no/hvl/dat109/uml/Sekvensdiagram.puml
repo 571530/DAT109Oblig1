@@ -11,9 +11,12 @@ note left : Kan være flere enn 2 spillere
 
 loop for alle runder
     loop for alle spillere
-        Spiller1 -> Runde : spille runde
+        Yatzoo -> Tekstgrensesnitt : Skriv ut hvem det er sin tur
+        Yatzoo -> Spiller1: Spiller runde
         loop 3
+            Spiller1 -> Runde : velger terninger som skal kastes på nytt
             Runde -> no.hvl.dat109.Terning : kast terninger
+            Spiller1 -> Tekstgrensesnitt : Skriv ut informasjon
         end
     end
 end

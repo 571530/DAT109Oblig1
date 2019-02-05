@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Tekstgrensesnitt {
     public static List<Spiller> lesSpillere() {
-        ArrayList<Spiller> spillere = new ArrayList<>();
+        ArrayList<Spiller> spillere = new ArrayList<Spiller>();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Antall spillere?");

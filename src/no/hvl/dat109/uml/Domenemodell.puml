@@ -1,0 +1,32 @@
+@startuml
+
+class Yatzoo{
+
+}
+
+class Tekstgrensesnitt {
+
+}
+
+class Spiller{
+
+}
+
+class Runde{
+
+}
+
+class no.hvl.dat109.Terning{
+Dyr
+
+}
+
+Yatzoo "1" --> "2-5" Spiller : har
+Yatzoo -> Tekstgrensesnitt
+Spiller -> Tekstgrensesnitt
+Yatzoo "1" -> "flere" Runde : består av
+Spiller "1" -> "flere" Runde : spiller
+Runde "1" -> "5" no.hvl.dat109.Terning : har
+
+
+@enduml

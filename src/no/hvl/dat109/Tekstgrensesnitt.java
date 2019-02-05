@@ -49,7 +49,7 @@ public class Tekstgrensesnitt {
         Scanner sc = new Scanner(System.in);
         List<Integer> valg = new ArrayList<>();
 
-        System.out.println("Skriv inn valgene med mellomrom imellom, får å beholde alle alle skriv ingenting");
+        System.out.println("Skriv inn valgene med mellomrom imellom. For å beholde alle, skriv ingenting");
 
         String input = sc.nextLine();
 

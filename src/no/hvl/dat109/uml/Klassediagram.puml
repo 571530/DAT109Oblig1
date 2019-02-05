@@ -42,11 +42,10 @@ trill()
 
 Yatzoo -> Spiller
 Yatzoo -> Tekstgrensesnitt
+Spiller -> Tekstgrensesnitt
 Yatzoo -> Runde
 Spiller -> Runde
 Runde -> no.hvl.dat109.Terning
-Runde -> Spiller
-
 
 
 @enduml

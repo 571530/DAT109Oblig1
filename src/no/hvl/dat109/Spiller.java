@@ -10,10 +10,16 @@ public class Spiller {
     }
 
     private String navn;
+
     private ArrayList<Runde> runder = new ArrayList<>();
 
     public Spiller(String navn){
         this.navn = navn;
+    }
+
+
+    public ArrayList<Runde> getRunder() {
+        return runder;
     }
 
     /**

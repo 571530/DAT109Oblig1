@@ -4,7 +4,7 @@ public class UlikeRunde extends Runde {
 
     @Override
     public String getNavn() {
-        return "Fem ulike runde";
+        return "\nFem ulike runde";
     }
 
     /**

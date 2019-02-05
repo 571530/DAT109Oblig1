@@ -10,7 +10,7 @@ public class ToParRunde extends Runde {
 
     @Override
     public String getNavn() {
-        return "To par runde";
+        return "\nTo par runde";
     }
 
     /**

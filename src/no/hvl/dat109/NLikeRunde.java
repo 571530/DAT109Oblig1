@@ -10,7 +10,7 @@ public class NLikeRunde extends Runde {
      */
     public NLikeRunde(int n) {
         this.n = n;
-        navn = "" + n + " like runde";
+        navn = "\n" + n + " like runde";
     }
 
     @Override

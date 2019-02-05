@@ -4,7 +4,7 @@ public class YatzooRunde extends Runde {
 
     @Override
     public String getNavn() {
-        return "Yatzoo runde (5 like)";
+        return "\nYatzoo runde (5 like)";
     }
 
     /**

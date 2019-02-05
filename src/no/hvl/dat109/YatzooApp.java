@@ -11,7 +11,7 @@ public class YatzooApp{
 
         yspill.spill();
 
-        System.out.println("Vinneren er " + yspill.finnVinner());
+        System.out.println("Vinneren er " + yspill.finnVinner() + " med " + yspill.finnVinner().antallPoeng());
 
     }
 

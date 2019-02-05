@@ -46,14 +46,17 @@ public class Spiller {
                 if (valg.isEmpty()) {
                     System.out.println("Beholder terninger");
                     runde.behold();
+                    Tekstgrensesnitt.visTerninger(runde.getTerninger());
                 }
                 else {
-                    System.out.println("Kaser på nytt");
+                    System.out.println("\nKaster på nytt");
                     runde.trillTerningN(valg);
+                    if (runde.getAntallkast() == 0){
+                        Tekstgrensesnitt.visTerninger(runde.getTerninger());
+                    }
                 }
-                Tekstgrensesnitt.visTerninger(runde.getTerninger());
             }
-            System.out.println(navn + " fikk " + runde.poeng() + " denne runden");
+            System.out.println("\n" + navn + " fikk " + runde.poeng() + " poeng denne runden");
             return true;
         }
         return false;
@@ -72,8 +75,6 @@ public class Spiller {
      */
     @Override
     public String toString() {
-        return "Spiller{" +
-                "navn='" + navn + '\'' +
-                '}';
+        return  navn;
     }
 }

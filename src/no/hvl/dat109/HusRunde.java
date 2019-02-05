@@ -5,7 +5,7 @@ import java.util.List;
 public class HusRunde extends Runde {
 
     public String getNavn() {
-        return "Hus runde";
+        return "\nHus runde";
     }
 
     /**

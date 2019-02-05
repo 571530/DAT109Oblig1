@@ -7,6 +7,7 @@ import java.util.List;
 
 public class YatzooSpill {
 
+
     private List<Spiller> spillere = new ArrayList<Spiller>();
 
 

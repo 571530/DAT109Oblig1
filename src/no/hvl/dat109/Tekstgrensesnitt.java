@@ -27,6 +27,11 @@ public class Tekstgrensesnitt {
         return spillere;
     }
 
+    /**
+     * Leser valg til spilleren
+     *
+     * @return listen av en spillers valg
+     */
     public static List<Integer> lesValg() {
         /*
         Fungerte ikke
@@ -78,6 +83,10 @@ public class Tekstgrensesnitt {
         return valg;
     }
 
+    /**
+     * Viser verdien til terninger i konsollet
+     * @param terninger
+     */
     public static void visTerninger(List<Terning> terninger) {
         for (Terning t: terninger) {
             System.out.print(t.getCurrentDyr().toString() + "\t");
